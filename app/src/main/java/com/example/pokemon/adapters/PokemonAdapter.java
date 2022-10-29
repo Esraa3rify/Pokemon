@@ -1,5 +1,6 @@
 package com.example.pokemon.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         return mList.size();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void setList(ArrayList<Pokemon> mList) {
         this.mList = mList;
         notifyDataSetChanged();
